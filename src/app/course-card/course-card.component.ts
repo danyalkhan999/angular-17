@@ -11,7 +11,7 @@ import { Course } from '../Modal/course';
 })
 export class CourseCardComponent {
     @Input({
-      required:true // updated: now we can set required as true, so that if there is data require in rendering of any component, you must add it.
+      required:false // updated: now we can set required as true, so that if there is data require in rendering of any component, you must add it.
     }) course!:Course;
 
     @Output('onCourseSelected') selectedCourse = new EventEmitter<Course>();

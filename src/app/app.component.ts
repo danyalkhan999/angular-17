@@ -13,11 +13,7 @@ import { COURSES } from './db-data';
 })
 export class AppComponent {
   title = 'angular-17 module';
-  course: Course[] = [];
-
-  ngCourse: Course = COURSES[0];
-  rxjsCourse: Course = COURSES[1];
-  ngxCourse: Course = COURSES[2];
+  courses: Course[] = COURSES;
 
   onkeyUp(text: string){
     this.title = text

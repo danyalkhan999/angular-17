@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+
 
 .course-card {
     margin: 11px 0;
@@ -19,7 +18,7 @@
 }
 
 .course-title h3 {
-    font-family: "Protest Riot", sans-serif;
+    font-family: 'Protest Revolution', sans-serif;
     letter-spacing: 1px;
 }
 

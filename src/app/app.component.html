@@ -3,11 +3,8 @@
 </div>
 
 <div class="courses">
-  <app-course-card (onCourseSelected)="onCourseSelected($event)" [course]="ngCourse"></app-course-card>
-
-  <app-course-card (onCourseSelected)="onCourseSelected($event)" [course]="rxjsCourse"></app-course-card>
-
-  <app-course-card (onCourseSelected)="onCourseSelected($event)" [course]="ngxCourse"></app-course-card>
-
+  @for(course of courses; track course.id){
+    <app-course-card (onCourseSelected)="onCourseSelected($event)" [course]="course"></app-course-card>
+  }
   
 </div>
