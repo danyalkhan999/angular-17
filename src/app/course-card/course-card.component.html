@@ -1,0 +1,17 @@
+<div class="course-card">
+    <!-- title -->
+    <div class="course-title">
+        <h3>{{course.description}}</h3>
+    </div>
+    <!-- image -->
+    <img class="course-img" [src]="course.iconUrl" alt="" />
+    <!-- description -->
+    <div class="course-desc">
+        <p>{{course.longDescription}}</p>
+    </div>
+
+    <button class="button-80" role="button" (click)="viewCourse()">View Course</button>
+
+
+
+</div>

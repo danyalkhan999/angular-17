@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+.top-menu{
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid;
+}
+
+.top-menu .logo{
+    width: 50px;
+    margin: auto 11px;
+}
+
+.courses{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.course-card{
+    width: 30%;
+    /* border: 1px solid saddlebrown; */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    
+    /* padding: 13px 0; */
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    align-items: center;
+
+}
+
+.course-title{
+    padding: 13px 0;
+}
+
+.course-title h3{
+    font-family: 'Protest Riot', sans-serif;
+    letter-spacing: 1px;
+}
+
+.course-img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.course-desc{ 
+    /* padding-top: 11px; */
+    padding: 13px 0;
+    text-align: center;
+
+}
