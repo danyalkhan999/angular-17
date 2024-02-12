@@ -3,6 +3,9 @@
     width: 100vw;
     height: auto;
     border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
 }
 
 .top-menu .logo{

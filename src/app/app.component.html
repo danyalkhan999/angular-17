@@ -1,5 +1,8 @@
 <div class="top-menu">
   <img src="../assets/img/angular.png" alt="" class="logo" />
+  <div>
+    <h2>{{date | date}}</h2>
+  </div>
 </div>
 
 <div class="courses">
@@ -10,8 +13,7 @@
     (onCourseSelected)="onCourseSelected($event)"
     [course]="course"
   ></app-course-card>
-  }
-  @empty{
-    <h1>No data available</h1>
+  } @empty{
+  <h1>No data available</h1>
   }
 </div>

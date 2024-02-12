@@ -26,13 +26,9 @@ export class CourseCardComponent {
       this.selectedCourse.emit(this.course)
     }
 
-    getStyles(){
-      return {
-        'background': 'url('+this.course.iconUrl+')',
-        'background-repeat': 'no-repeat',
-        'background-blend-mode': 'screen',
-        'background-size': 'cover',
-        'color': this.course.iconUrl ? 'white' : 'black'
+    categoryStyles(){
+      return{
+        'color': this.course.category === 'BEGINNER' ? 'green' : this.course.category === 'INTERMEDIATE' ? 'orange': 'red'
       }
     }
 }

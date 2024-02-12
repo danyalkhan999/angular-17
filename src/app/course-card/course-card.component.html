@@ -1,8 +1,8 @@
 @if(course){
-    <div class="course-card" [ngClass]="{'beginner': course.category === 'BEGINNER', 'advanced': course.category === 'ADVANCED'}" [ngStyle]="getStyles()">
+    <div class="course-card">
         <!-- title -->
         <div class="course-title" >
-            <h3>{{index +" "+course.description}}</h3>
+            <h3>{{index +" "+course.description | titlecase}}</h3>
         </div>
         <!-- image -->
         @if(course.iconUrl){
@@ -11,6 +11,24 @@
         @else{
             <img class="course-img" src="../../assets/img/placeholder-img.jpg" alt="" />
         }
+        <!-- category -->
+        <div class="course-category" [ngStyle]="categoryStyles()">
+
+            @switch(course.category){
+                @case ('BEGINNER') {
+                    <h4>Beginner</h4>
+                }
+    
+                @case ('INTERMEDIATE') {
+                    <h4>Intermediate</h4>
+                }
+    
+                @case ('ADVANCED') {
+                    <h4>Advanced</h4>
+                }
+            }
+
+        </div>
         <!-- description -->
         <div class="course-desc">
             <p>{{course.longDescription}}</p>

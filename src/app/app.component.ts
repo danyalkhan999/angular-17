@@ -16,6 +16,8 @@ export class AppComponent {
   title = 'angular-17 module';
   courses: Course[] = COURSES;
 
+  date: Date = new Date();
+
   onkeyUp(text: string){
     this.title = text
   }
