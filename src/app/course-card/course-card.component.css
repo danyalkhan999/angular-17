@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5), inset 10px 10px 20px rgba(0,0,0,0.2);
     align-items: center;
     padding: 15px 0;
     row-gap: 11px;
     background-color: f8f9fa;
 }
+
 
 .course-title {
     /* padding: 13px 0; */
@@ -33,8 +34,8 @@
     text-align: center;
     display: block;
     display: -webkit-box;
-    max-width: 100%;
-    font-size: 14px;
+    max-width: 95%;
+    font-size: 13px;
     /* margin: 13px auto; */
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

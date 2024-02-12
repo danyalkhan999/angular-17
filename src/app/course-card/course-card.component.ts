@@ -14,6 +14,10 @@ export class CourseCardComponent {
       required:false // updated: now we can set required as true, so that if there is data require in rendering of any component, you must add it.
     }) course!:Course;
 
+    @Input({required: true})
+    index!: number
+
+
     @Output('onCourseSelected') selectedCourse = new EventEmitter<Course>();
 
     viewCourse(){

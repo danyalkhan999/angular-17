@@ -19,37 +19,17 @@
     justify-content: space-evenly;
 }
 
-.course-card{
-    width: 30%;
-    /* border: 1px solid saddlebrown; */
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    
-    /* padding: 13px 0; */
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-    align-items: center;
-
+app-course-card.is-first{
+    border-top: 2px solid gray;
 }
 
-.course-title{
-    padding: 13px 0;
+app-course-card.is-last{
+    border-bottom: 2px solid gray;
 }
 
-.course-title h3{
-    font-family: 'Protest Riot', sans-serif;
-    letter-spacing: 1px;
+app-course-card.is-even{
+    background-color: blanchedalmond;
 }
-
-.course-img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.course-desc{ 
-    /* padding-top: 11px; */
-    padding: 13px 0;
-    text-align: center;
-
+app-course-card.is-odd{
+    background-color: cadetblue;
 }

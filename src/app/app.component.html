@@ -1,10 +1,18 @@
 <div class="top-menu">
-  <img src="../assets/img/angular.png" alt="" class="logo">
+  <img src="../assets/img/angular.png" alt="" class="logo" />
 </div>
 
 <div class="courses">
-  @for(course of courses; track course.id){
-    <app-course-card (onCourseSelected)="onCourseSelected($event)" [course]="course"></app-course-card>
+  @for(course of courses; track course.id; let index = $index; let count = $count; let first = $first; 
+  let last = $last; let even = $even; let odd = $odd){
+  <app-course-card
+    [class.is-first]="first"
+    [class.is-last]="last"
+    [class.is-even]="even"
+    [class.is-odd]="odd"
+    [index]="index"
+    (onCourseSelected)="onCourseSelected($event)"
+    [course]="course"
+  ></app-course-card>
   }
-  
 </div>
