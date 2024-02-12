@@ -1,17 +1,22 @@
-<div class="course-card">
-    <!-- title -->
-    <div class="course-title">
-        <h3>{{index +" "+course.description}}</h3>
+@if(course){
+    <div class="course-card" [ngClass]="{'beginner': course.category === 'BEGINNER', 'advanced': course.category === 'ADVANCED'}" [ngStyle]="getStyles()">
+        <!-- title -->
+        <div class="course-title" >
+            <h3>{{index +" "+course.description}}</h3>
+        </div>
+        <!-- image -->
+        @if(course.iconUrl){
+            <img class="course-img" [src]="course.iconUrl" alt="" />
+        }
+        @else{
+            <img class="course-img" src="../../assets/img/placeholder-img.jpg" alt="" />
+        }
+        <!-- description -->
+        <div class="course-desc">
+            <p>{{course.longDescription}}</p>
+        </div>
+    
+        <button class="button-80" role="button" (click)="viewCourse()">View Course</button>
+    
     </div>
-    <!-- image -->
-    <img class="course-img" [src]="course.iconUrl" alt="" />
-    <!-- description -->
-    <div class="course-desc">
-        <p>{{course.longDescription}}</p>
-    </div>
-
-    <button class="button-80" role="button" (click)="viewCourse()">View Course</button>
-
-
-
-</div>
+}
