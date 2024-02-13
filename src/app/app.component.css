@@ -22,6 +22,12 @@
     justify-content: space-evenly;
 }
 
+.course-img {
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+}
+
 app-course-card.is-first{
     border-top: 2px solid gray;
 }

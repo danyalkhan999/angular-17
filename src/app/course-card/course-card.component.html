@@ -1,16 +1,15 @@
 @if(course){
-    <div class="course-card">
+    <div class="course-card" #container>
         <!-- title -->
         <div class="course-title" >
             <h3>{{course.description | titlecase}}</h3>
         </div>
         <!-- image -->
-        @if(course.iconUrl){
-            <img #courseImage class="course-img" [src]="course.iconUrl" alt="" />
-        }
-        @else{
-            <img class="course-img" src="../../assets/img/placeholder-img.jpg" alt="" />
-        }
+        <!-- <img #courseImage class="course-img" [src]="course.iconUrl" [alt]="course.description" /> -->
+        <ng-content select=".course-image"></ng-content>
+
+        <ng-content></ng-content>
+
         <!-- category -->
         <div class="course-category" [ngStyle]="categoryStyles()">
 

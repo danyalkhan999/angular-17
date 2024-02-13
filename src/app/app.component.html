@@ -5,16 +5,17 @@
   </div>
 </div>
 
-<div class="courses" #container>
-  @for(course of courses; track course.id; let index = $index; let count = $count; let first = $first; 
-  let last = $last; let even = $even; let odd = $odd){
+<div class="courses" *ngIf="courses[0] as course">
+ 
   <app-course-card
-    [index]="index"
     (onCourseSelected)="onCourseSelected($event)"
     [course]="course"
-    #cardRef 
-  ></app-course-card>
-  } @empty{
-  <h1>No data available</h1>
-  }
+  >
+    <div class="course-image" #courseImage>
+      <img class="course-img" [src]="course.iconUrl" [alt]="course.description" />
+    </div>
+
+    <h2>I am a heading</h2>
+  </app-course-card>
+
 </div>
