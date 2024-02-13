@@ -5,13 +5,14 @@
   </div>
 </div>
 
-<div class="courses">
+<div class="courses" #container>
   @for(course of courses; track course.id; let index = $index; let count = $count; let first = $first; 
   let last = $last; let even = $even; let odd = $odd){
   <app-course-card
     [index]="index"
     (onCourseSelected)="onCourseSelected($event)"
     [course]="course"
+    #cardRef 
   ></app-course-card>
   } @empty{
   <h1>No data available</h1>
