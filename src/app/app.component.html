@@ -1,21 +1,46 @@
 <div class="top-menu">
   <img src="../assets/img/angular.png" alt="" class="logo" />
   <div>
-    <h2>{{date | date}}</h2>
+    <h2>{{ date | date }}</h2>
   </div>
 </div>
 
 <div class="courses" *ngIf="courses[0] as course">
- 
+
   <app-course-card
+    highlighted
     (onCourseSelected)="onCourseSelected($event)"
     [course]="course"
   >
+      <div class="course-image" #courseImage  *ngxUnless="!course.iconUrl">
+        <img
+          class="course-img"
+          [src]="course.iconUrl"
+          [alt]="course.description"
+        />
+      </div>
+
+    <div class="course-desc">
+      <p>{{ course.longDescription }}</p>
+    </div>
+  </app-course-card>
+
+  <app-course-card
+    [highlighted]="courses[2].category === 'ADVANCED'"
+    (onCourseSelected)="onCourseSelected($event)"
+    [course]="courses[2]"
+  >
     <div class="course-image" #courseImage>
-      <img class="course-img" [src]="course.iconUrl" [alt]="course.description" />
+      <img
+        class="course-img"
+        [src]="courses[2].iconUrl"
+        [alt]="course.description"
+      />
     </div>
 
-    <h2>I am a heading</h2>
+    <div class="course-desc">
+      <p>{{ course.longDescription }}</p>
+    </div>
   </app-course-card>
 
 </div>

@@ -28,6 +28,15 @@
     object-fit: cover;
 }
 
+.highlighted{
+    box-shadow: 0 2px 16px 0 rgb(252, 186, 3),0 3px 8px rgba(226, 21, 19, 0.47), 0 6px 8px -1px #b41c18 !important;
+}
+
+app-course-card{
+    border-radius: 7px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4), inset 5px 5px 10px rgba(0,0,0,0.2);
+}
+
 app-course-card.is-first{
     border-top: 2px solid gray;
 }

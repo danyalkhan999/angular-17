@@ -6,6 +6,31 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.course-img{
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+}
+
 /* app-course-card.is-first{
     background-color: aquamarine;
+} */
+
+.course-desc {
+    /* padding-top: 11px; */
+    /* padding: 0 22px; */
+    text-align: center;
+    display: block;
+    display: -webkit-box;
+    max-width: 95%;
+    font-size: 13px;
+    /* margin: 13px auto; */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .highlighted{
+    box-shadow: 0 2px 16px 0 rgb(252, 186, 3),0 3px 8px rgba(226, 21, 19, 0.47), 0 6px 8px -1px #b41c18 !important; 
 } */

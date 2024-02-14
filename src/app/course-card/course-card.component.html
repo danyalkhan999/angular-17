@@ -1,5 +1,5 @@
 @if(course){
-    <div class="course-card" #container>
+    <div class="course-card" #courseCard>
         <!-- title -->
         <div class="course-title" >
             <h3>{{course.description | titlecase}}</h3>
@@ -7,8 +7,6 @@
         <!-- image -->
         <!-- <img #courseImage class="course-img" [src]="course.iconUrl" [alt]="course.description" /> -->
         <ng-content select=".course-image"></ng-content>
-
-        <ng-content></ng-content>
 
         <!-- category -->
         <div class="course-category" [ngStyle]="categoryStyles()">
@@ -29,9 +27,11 @@
 
         </div>
         <!-- description -->
-        <div class="course-desc">
+        <!-- <div class="course-desc">
             <p>{{course.longDescription}}</p>
-        </div>
+        </div> -->
+
+        <ng-content select=".course-desc"></ng-content>
     
         <button class="button-80" role="button" (click)="viewCourse()">View Course</button>
     

@@ -4,15 +4,18 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { Course } from './Modal/course';
 import { COURSES } from './db-data';
 import { CommonModule } from '@angular/common';
+import { HighlightedDirective } from './directives/highlighted.directive';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CourseCardComponent, CommonModule],
+  imports: [RouterOutlet, CourseCardComponent, CommonModule, HighlightedDirective, NgxUnlessDirective],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',  
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'angular-17 module';
   courses: Course[] = COURSES;
 
@@ -22,17 +25,9 @@ export class AppComponent implements AfterViewInit {
 
   date: Date = new Date();
 
-  @ViewChild('container')
-  container!: ElementRef
 
-  constructor() {
-    console.log("container Div", this.cards);
-  }
-  ngAfterViewInit(): void {
-    this.cards.forEach(card => console.log(card))
-    // please avoid data modification here.
-    // this.courses[0].description = "test"
-  }
+
+
 
   onkeyUp(text: string){
     this.title = text
@@ -41,6 +36,5 @@ export class AppComponent implements AfterViewInit {
   onCourseSelected(course: any){
     console.log("button clicked app ", this.cards);
 
-    console.log("container", this.container);
   }
 }
